@@ -9,15 +9,9 @@ const Category = ({ categories }) => {
           <div
             key={item.id}
             className="category"
-            onClick={()=>navigate("Category/" + item.id)}
+            onClick={() => navigate("Category/" + item.id)}
           >
-            <img
-              src={
-                process.env.REACT_APP_BASE_URL +
-                item?.attributes?.img?.data?.attributes?.url
-              }
-              alt=""
-            />
+            <img src={item?.attributes?.img?.data?.attributes?.url} alt="" />
           </div>
         ))}
       </div>

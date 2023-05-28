@@ -12,10 +12,7 @@ const CartItem = () => {
         <div className="cart-product">
           <div className="img-container">
             <img
-              src={
-                process.env.REACT_APP_BASE_URL +
-                item?.attributes?.img?.data[0]?.attributes?.url
-              }
+              src={item?.attributes?.img?.data[0]?.attributes?.url}
               alt="loading..."
             />
           </div>
@@ -30,12 +27,16 @@ const CartItem = () => {
                 -
               </span>
               <span>{item.attributes.quantity}</span>
-              <span onClick={() => handleCartProductQuantity("inc", item)} >+</span>
+              <span onClick={() => handleCartProductQuantity("inc", item)}>
+                +
+              </span>
             </div>
             <div className="text">
               <span>{item.attributes.quantity}</span>
               <span>X</span>
-              <span className="highlight">&#8377;{item.attributes.price * item.attributes.quantity}</span>
+              <span className="highlight">
+                &#8377;{item.attributes.price * item.attributes.quantity}
+              </span>
             </div>
           </div>
         </div>
